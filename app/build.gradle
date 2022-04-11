@@ -1,0 +1,89 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'// 注解的插件，添加此组件使用@Bindable注解
+}
+
+android {
+    compileSdk Android.compileSdkVersion
+
+    defaultConfig {
+        applicationId App.applicationId
+        minSdk Android.minSdkVersion
+        targetSdk Android.targetSdkVersion
+        versionCode Android.versionCode
+        versionName Android.versionName
+
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+
+        // Java开发的情况
+        /*javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }*/
+        kapt {
+            arguments {
+                arg("AROUTER_MODULE_NAME", project.getName())
+            }
+        }
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    /*视图绑定旧版启用方式
+    viewBinding {
+        enabled = true
+    }*/
+    buildFeatures {
+        //viewBinding = true
+        dataBinding = true
+    }
+    /*数据绑定旧版启用方式
+    dataBinding {
+        enabled = true
+    }*/
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation Dependencies.androidx_multidex
+
+    implementation Support.material
+    implementation Support.appcompat
+    testImplementation Support.junit
+    androidTestImplementation Support.junit_ext
+    androidTestImplementation Support.espresso_core
+
+    // jetpack组件
+    implementation Support.fragment_ktx
+    implementation Support.lifecycle_viewmodel_ktx
+    implementation Support.lifecycle_livedata_ktx
+    // implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.0-alpha03")
+
+    // ARouter 阿里路由
+    implementation Dependencies.arouter_api
+    // annotationProcessor 'com.alibaba:arouter-compiler:1.5.2' // Java开发情况
+    kapt Dependencies.arouter_compiler // kotlin开发情况
+
+    // 图表
+    implementation project(path: ':charts')
+
+    implementation Dependencies.baservdapterhelper
+    implementation Dependencies.eventbus
+    implementation Dependencies.statusbarutil
+    implementation Dependencies.glide
+
+}

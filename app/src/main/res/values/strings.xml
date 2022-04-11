@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">JetPack_Simple</string>
+
+    <string name="mine_content_tab_articles">音频</string>
+    <string name="mine_content_tab_video">视频</string>
+    <string name="mine_share_articles">分享一篇有趣的文章</string>
+    <string name="mine_share_vidoes">分享一篇有趣的视频</string>
+    <string name="popupwindow">PopupWindow</string>
+
+</resources>

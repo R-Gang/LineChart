@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ARouterActivity">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvChart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_size_15"
+            android:layout_marginTop="@dimen/margin_size_15"
+            android:layout_marginEnd="@dimen/margin_size_15"
+            android:background="@color/color_f"
+            app:cardBackgroundColor="@color/color_f"
+            app:cardCornerRadius="@dimen/margin_size_8"
+            app:cardElevation="@dimen/margin_size_1">
+
+            <com.gang.kotlin.chart.LineChart
+                android:id="@+id/lineChart"
+                android:layout_width="match_parent"
+                android:layout_height="278dp" />
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+</layout>
