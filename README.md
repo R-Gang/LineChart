@@ -2,10 +2,7 @@
 
 使用JetPack组件开发-Chart图表控件-Popup弹窗
 
-![line_chart.png](https://github.com/R-Gang/Chart-Popup/blob/master/images/line_chart.png)
-
-![jetpack_simple.jpg](https://github.com/R-Gang/Chart-Popup/blob/master/images/jetpack_simple.jpg)
-
+![line_chart.png](https://github.com/R-Gang/Chart-Popup/blob/master/images/line_chart.gif)
 ![easy_popup.gif](https://github.com/R-Gang/Chart-Popup/blob/master/images/easy_popup.gif) 
 
 ## Usage
