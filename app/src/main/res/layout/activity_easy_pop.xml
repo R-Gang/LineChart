@@ -106,15 +106,17 @@
                     android:background="@drawable/rect_c6_f2_solid"
                     android:gravity="center"
                     android:text="长按我试试" />
-            </LinearLayout>
-        </androidx.core.widget.NestedScrollView>
 
-        <Button
-            android:id="@+id/btn_complex"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="复杂的弹窗点击外面不可消失"
-            android:textSize="14sp" />
+                <Button
+                    android:id="@+id/btn_complex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="复杂的弹窗点击外面不可消失"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
 
         <RelativeLayout
             android:id="@+id/dimView"

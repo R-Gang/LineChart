@@ -97,6 +97,11 @@ class EasyPopActivity : BaseActivity() {
     }
 
     override fun initData() {
+
+
+    }
+
+    override fun onClick() {
         mTitleBar?.setOnTitleListener(object : TitleBar.OnTitleListener {
             override fun onLeftClick(view: View?) {
                 finish()
@@ -111,10 +116,6 @@ class EasyPopActivity : BaseActivity() {
             }
 
         })
-
-    }
-
-    override fun onClick() {
         mCircleBtn?.setOnClickListener { onClick(it) }
         mAboveBtn?.setOnClickListener { onClick(it) }
         mRightBtn?.setOnClickListener { onClick(it) }

@@ -4,8 +4,8 @@
 
 ![line_chart.png](https://github.com/R-Gang/Chart-Popup/blob/master/images/line_chart.png)
 
-
 ![jetpack_simple.jpg](https://github.com/R-Gang/Chart-Popup/blob/master/images/jetpack_simple.jpg)
+
 ![easy_popup.gif](https://github.com/R-Gang/Chart-Popup/blob/master/images/easy_popup.gif) 
 
 ## Usage
@@ -58,7 +58,7 @@
 
 可以 viewBinding=true 获取 View 对象。
 ```
-  releaseBinding = PopupReleaseDownBinding.inflate(layoutInflater)
+    releaseBinding = PopupReleaseDownBinding.inflate(layoutInflater)
 ```
 ### 显示
 
