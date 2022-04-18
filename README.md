@@ -2,7 +2,7 @@
 
 使用JetPack组件开发-Chart图表控件-Popup弹窗
 
-![line_chart.png](https://github.com/R-Gang/Chart-Popup/blob/master/images/line_chart.gif)
+![line_chart.gif](https://github.com/R-Gang/Chart-Popup/blob/master/images/line_chart.gif)
 ![easy_popup.gif](https://github.com/R-Gang/Chart-Popup/blob/master/images/easy_popup.gif) 
 
 ## Usage
@@ -26,8 +26,6 @@
     /**
      * 发布弹框
      */
-    private var releaseBinding: PopupReleaseDownBinding? = null
-    
     private val mReleasePop by lazy {
         EasyPopup.create().setContentView(releaseBinding?.root)
             ?.setAnimationStyle(R.style.RightTopPopAnim)
@@ -55,6 +53,8 @@
 
 可以 viewBinding=true 获取 View 对象。
 ```
+    private var releaseBinding: PopupReleaseDownBinding? = null
+    
     releaseBinding = PopupReleaseDownBinding.inflate(layoutInflater)
 ```
 ### 显示

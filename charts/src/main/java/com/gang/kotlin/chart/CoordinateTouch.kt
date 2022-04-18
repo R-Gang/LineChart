@@ -18,15 +18,21 @@ import android.view.MotionEvent
 open class CoordinateTouch(context: Context, attrs: AttributeSet) :
     CoordinateSystem(context, attrs) {
 
+    var mCanvas: Canvas? = null
     var origin: PointF = PointF(0f, 0f) // 坐标系原点坐标
     var xEndPoint: PointF = PointF(0f, 0f) // x轴终点坐标
     var yEndPoint: PointF = PointF(0f, 0f) // y轴终点坐标
     var xWidthUnit = 0f //x轴单位刻度的宽度，指一个bar在x轴上占用的总宽度（包含了bar两边的空白区域）
 
+    // 图表 x/y 轴选中的值
+    var xData: String = ""
+    var yData: Int = 0
+
     var listener: ((Int?, String?, PointF?) -> Unit)? = null
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
+        this.mCanvas = canvas
 
         origin.x = dividerSpaceYL - paddingStart.toFloat()
         origin.y = sumHeight - buttomHeiht
@@ -138,7 +144,7 @@ open class CoordinateTouch(context: Context, attrs: AttributeSet) :
     /**
      * 绘制说明区域
      */
-    open fun drawFocusedInfoText(canvas: Canvas, focusedDataIndex: Int) {
+    open fun drawFocusedInfoText(canvas: Canvas?, focusedDataIndex: Int) {
         return
     }
 

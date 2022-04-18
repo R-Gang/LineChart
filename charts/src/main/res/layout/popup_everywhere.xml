@@ -6,7 +6,7 @@
 
         <variable
             name="lineData"
-            type="com.gang.kotlin.chart.LineChart" />
+            type="com.gang.kotlin.chart.CoordinatePopup" />
     </data>
 
     <LinearLayout
