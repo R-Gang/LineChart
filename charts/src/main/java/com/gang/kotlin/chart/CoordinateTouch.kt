@@ -18,11 +18,12 @@ import android.view.MotionEvent
 open class CoordinateTouch(context: Context, attrs: AttributeSet) :
     CoordinateSystem(context, attrs) {
 
-    var mCanvas: Canvas? = null
     var origin: PointF = PointF(0f, 0f) // 坐标系原点坐标
     var xEndPoint: PointF = PointF(0f, 0f) // x轴终点坐标
     var yEndPoint: PointF = PointF(0f, 0f) // y轴终点坐标
     var xWidthUnit = 0f //x轴单位刻度的宽度，指一个bar在x轴上占用的总宽度（包含了bar两边的空白区域）
+
+    var mCanvas: Canvas? = null
 
     // 图表 x/y 轴选中的值
     var xData: String = ""
@@ -32,6 +33,8 @@ open class CoordinateTouch(context: Context, attrs: AttributeSet) :
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
+        if (YValueList == null || XValueList == null) return
+
         this.mCanvas = canvas
 
         origin.x = dividerSpaceYL - paddingStart.toFloat()

@@ -6,5 +6,6 @@
     <string name="mine_share_articles">分享一篇有趣的文章</string>
     <string name="mine_share_vidoes">分享一篇有趣的视频</string>
     <string name="popupwindow">PopupWindow</string>
+    <string name="refarsh_line_data">刷新数据</string>
 
 </resources>

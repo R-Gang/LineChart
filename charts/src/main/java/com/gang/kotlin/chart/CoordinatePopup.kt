@@ -32,6 +32,8 @@ import com.gang.library.common.utils.show
 open class CoordinatePopup(context: Context, attrs: AttributeSet) :
     CoordinateTouch(context, attrs) {
 
+    var descName: String = "播放量" // 弹框说明
+
     var mEverywherePopup: EverywherePopup? = null
     var everywhereBinding: PopupEverywhereBinding? = null
 
@@ -65,6 +67,11 @@ open class CoordinatePopup(context: Context, attrs: AttributeSet) :
         }
     }
 
+    fun setDescName(posDesc: String = descName): CoordinatePopup {
+        descName = posDesc
+        return this
+    }
+
     /**
      * 绘制说明区域
      */
@@ -77,7 +84,7 @@ open class CoordinatePopup(context: Context, attrs: AttributeSet) :
                     dismiss()
                     if (yData != null) {
                         this@CoordinatePopup.yData = yData
-                        it.tvYData.text = "播放量：$yData"
+                        it.tvYData.text = String.format("%s：%s", descName, yData)
                     }
                     if (xData != null) {
                         this@CoordinatePopup.xData = xData

@@ -46,7 +46,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tvXData"
                 android:gravity="center"
-                android:text='@{"播放量："+lineData.yData}'
+                android:text='@{lineData.descName+"："+lineData.yData}'
                 android:textColor="@color/color_f"
                 android:textSize="@dimen/text_size_12"
                 tools:text="播放量：70" />

@@ -5,6 +5,9 @@
 
     <data>
 
+        <variable
+            name="arouter"
+            type="com.simple.kotlin.ARouterActivity" />
     </data>
 
     <RelativeLayout
@@ -12,10 +15,23 @@
         android:layout_height="match_parent"
         tools:context=".ARouterActivity">
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/tvRefarsh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/margin_size_15"
+            android:layout_marginEnd="@dimen/margin_size_15"
+            android:onClick="@{(v)->arouter.refarshLineData(v)}"
+            android:text="@string/refarsh_line_data"
+            android:textColor="@color/color_20a0da"
+            android:textSize="@dimen/text_size_14" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/cvChart"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/tvRefarsh"
             android:layout_marginStart="@dimen/margin_size_15"
             android:layout_marginTop="@dimen/margin_size_15"
             android:layout_marginEnd="@dimen/margin_size_15"

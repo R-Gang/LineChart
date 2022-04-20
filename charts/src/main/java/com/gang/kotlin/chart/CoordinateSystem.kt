@@ -111,6 +111,7 @@ open class CoordinateSystem(context: Context, attrs: AttributeSet) :
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
+        if (YValueList == null || XValueList == null) return
         measure()
         toGetXy() //获取x和y的坐标
         if (!animation) {
