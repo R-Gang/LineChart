@@ -10,6 +10,7 @@ import com.alibaba.android.arouter.facade.annotation.Autowired
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter
 import com.simple.kotlin.base.Constance.ACTIVITY_URL_AROUTER
+import com.simple.kotlin.base.MyLifecycleObserver
 import com.simple.kotlin.databinding.ActivityArouterBinding
 import com.simple.kotlin.jetpack.modelview.UserData
 
@@ -20,7 +21,7 @@ class ARouterActivity : AppCompatActivity() {
 
     private lateinit var aRouterBinding: ActivityArouterBinding
 
-    private lateinit var amountList: Array<ArrayList<Int>>
+    private lateinit var amountList: Array<ArrayList<Long>>
     private lateinit var dateList: Array<ArrayList<String>>
 
     @Autowired
@@ -64,9 +65,12 @@ class ARouterActivity : AppCompatActivity() {
 
             lineChart.apply {
                 updateTime(amountList[0], dateList[0])
+                setDescName("点赞量")
             }
 
         }
+
+        lifecycle.addObserver(MyLifecycleObserver())
     }
 
     var dataIndex = 0

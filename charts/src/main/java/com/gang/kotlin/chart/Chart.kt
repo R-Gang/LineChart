@@ -41,7 +41,7 @@ abstract class Chart(context: Context?, attrs: AttributeSet?) : View(context, at
     var textPaint //文字的画笔
             : Paint? = null
     var YValueList //Y轴值集合
-            : ArrayList<Int>? = null
+            : ArrayList<Long>? = null
     var XValueList //X轴值集合
             : ArrayList<String>? = null
     var oneHeight //每一个小段所要分成的高
@@ -73,7 +73,7 @@ abstract class Chart(context: Context?, attrs: AttributeSet?) : View(context, at
     /**
      * 更新阅读时间
      */
-    open fun updateTime(yValueList: ArrayList<Int>?, xValueList: ArrayList<String>?) {
+    open fun updateTime(yValueList: ArrayList<Long>?, xValueList: ArrayList<String>?) {
         YValueList = yValueList
         XValueList = xValueList
         if (YValueList != null && YValueList?.size as Int > 0 && XValueList != null
@@ -87,7 +87,7 @@ abstract class Chart(context: Context?, attrs: AttributeSet?) : View(context, at
     /**
      * 数据更新后的回调，主要用于重置动画参数
      */
-    open fun onDataUpdate(yData: ArrayList<Int>?, xData: ArrayList<String>?) {
+    open fun onDataUpdate(yData: ArrayList<Long>?, xData: ArrayList<String>?) {
 
     }
 
@@ -97,7 +97,7 @@ abstract class Chart(context: Context?, attrs: AttributeSet?) : View(context, at
      * @param YValueList
      * @return
      */
-    fun getMaxTime(YValueList: ArrayList<Int>?): Double {
+    fun getMaxTime(YValueList: ArrayList<Long>?): Double {
         maxTime = 0.0
         for (i in YValueList?.indices as IntRange) {
             if (maxTime < YValueList[i]) {

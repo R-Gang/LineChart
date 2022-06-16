@@ -12,6 +12,7 @@ import com.gang.kotlin.databinding.PopupEverywhereBinding
 import com.gang.kotlin.popup.ARROWDIRECTION
 import com.gang.kotlin.popup.EverywherePopup
 import com.gang.kotlin.popup.TriangleDrawable
+import com.gang.kotlin.views.formatNumber
 import com.gang.kotlin.views.setBackground
 import com.gang.library.common.utils.gone
 import com.gang.library.common.utils.show
@@ -32,6 +33,9 @@ import com.gang.library.common.utils.show
 open class CoordinatePopup(context: Context, attrs: AttributeSet) :
     CoordinateTouch(context, attrs) {
 
+    // 图表 x/y 轴选中的值
+    var xData: String = ""
+    var yData: String = ""
     var descName: String = "播放量" // 弹框说明
 
     var mEverywherePopup: EverywherePopup? = null
@@ -61,6 +65,9 @@ open class CoordinatePopup(context: Context, attrs: AttributeSet) :
                         }
                     }
                 })
+                ?.setOnDismissListener {
+                    invalidate()
+                }
                 ?.setNeedReMeasureWH(true)
                 ?.setFocusAndOutsideEnable(true)
                 ?.apply()
@@ -80,11 +87,11 @@ open class CoordinatePopup(context: Context, attrs: AttributeSet) :
         everywhereBinding?.let {
             // 说明弹框
             mEverywherePopup?.apply {
-                listener = fun(yData: Int?, xData: String?, point: PointF?) {
+                listener = fun(yData: Long?, xData: String?, point: PointF?) {
                     dismiss()
                     if (yData != null) {
-                        this@CoordinatePopup.yData = yData
-                        it.tvYData.text = String.format("%s：%s", descName, yData)
+                        this@CoordinatePopup.yData = formatNumber(yData)
+                        it.tvYData.text = String.format("%s：%s", descName, formatNumber(yData))
                     }
                     if (xData != null) {
                         this@CoordinatePopup.xData = xData

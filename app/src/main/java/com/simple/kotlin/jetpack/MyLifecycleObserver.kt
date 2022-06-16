@@ -20,27 +20,27 @@ class MyLifecycleObserver:LifecycleObserver {
 
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
     fun onCreate(){
-        Log.e("Lifecycle","onCreate")
+        Log.e("Lifecycle0","onCreate")
     }
     @OnLifecycleEvent(Lifecycle.Event.ON_START)
     fun onStart(){
-        Log.e("Lifecycle","onStart")
+        Log.e("Lifecycle0","onStart")
     }
     @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
     fun onResume(){
-        Log.e("Lifecycle","onResume")
+        Log.e("Lifecycle0","onResume")
     }
     @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
     fun onPause(){
-        Log.e("Lifecycle","onPause")
+        Log.e("Lifecycle0","onPause")
     }
     @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
     fun onStop(){
-        Log.e("Lifecycle","onStop")
+        Log.e("Lifecycle0","onStop")
     }
     @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
     fun onDestroy(){
-        Log.e("Lifecycle","onDestroy")
+        Log.e("Lifecycle0","onDestroy")
     }
 
 }

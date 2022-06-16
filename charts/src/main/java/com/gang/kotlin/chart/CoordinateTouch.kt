@@ -25,11 +25,7 @@ open class CoordinateTouch(context: Context, attrs: AttributeSet) :
 
     var mCanvas: Canvas? = null
 
-    // 图表 x/y 轴选中的值
-    var xData: String = ""
-    var yData: Int = 0
-
-    var listener: ((Int?, String?, PointF?) -> Unit)? = null
+    var listener: ((Long?, String?, PointF?) -> Unit)? = null
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
@@ -71,7 +67,7 @@ open class CoordinateTouch(context: Context, attrs: AttributeSet) :
     /**
      * 触摸事件反馈
      */
-    fun onFocused(yData: Int?, xData: String?, point: PointF?) {
+    fun onFocused(yData: Long?, xData: String?, point: PointF?) {
         listener?.invoke(yData, xData, point)
     }
 

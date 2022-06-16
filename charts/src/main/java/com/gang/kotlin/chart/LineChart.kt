@@ -53,7 +53,7 @@ class LineChart(context: Context, attrs: AttributeSet) : CoordinatePopup(context
         }.start()
     }
 
-    override fun onDataUpdate(yData: ArrayList<Int>?, xData: ArrayList<String>?) {
+    override fun onDataUpdate(yData: ArrayList<Long>?, xData: ArrayList<String>?) {
         super.onDataUpdate(yData, xData)
         if (animation) {
             inited = false

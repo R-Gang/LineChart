@@ -248,16 +248,25 @@ open class CoordinateSystem(context: Context, attrs: AttributeSet) :
         for (i in 1..intervalYCount) {
             text = (intervalY * i).toString() // 每个y间隔名称
             number = intervalY * i // 每个y间隔值
+            var newnumber = ""
             textPaint?.apply {
+                if (text.length > 2) {
+                    newnumber = (text.substring(0, 2).toInt() + 1).toString() // 取前两位第三位进一
+                    (1..(text.length - 2)).forEach {
+                        newnumber += "0" // 补0
+                    }
+                } else {
+                    newnumber = text
+                }
                 val y = sumHeight - oneHeight * number
-                canvas.drawText(text,
+                canvas.drawText(newnumber,
                     valueSpaceYL,
                     y - buttomHeiht - rect.height() / 2 - valueDividerSpace,
                     this)
 
                 if (isDash) { // 是否虚线
-                    //绘制长度为4的实线后再绘制长度为20的空白区域，0位间隔
-                    scorePaint?.pathEffect = DashPathEffect(floatArrayOf(20f, 20f), 0f)
+                    //绘制长度为4的实线后再绘制长度为15的空白区域，0位间隔
+                    scorePaint?.pathEffect = DashPathEffect(floatArrayOf(15f, 15f), 0f)
                 }
                 scorePaint?.apply {
                     canvas.drawLine(dividerSpaceYL,
