@@ -131,8 +131,8 @@ open class CoordinateTouch(context: Context, attrs: AttributeSet) :
                 }
             } else if (event.action == MotionEvent.ACTION_UP || event.action == MotionEvent.ACTION_OUTSIDE) {
                 focusedDataIndex = -1
-                onFocused(null, null, null)
-                invalidate()
+                // onFocused(null, null, null)
+                // invalidate()
                 return true
             }
         }

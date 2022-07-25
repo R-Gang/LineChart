@@ -30,28 +30,28 @@ class TitleBar @JvmOverloads constructor(
         mTitleText = findViewById<View>(R.id.tv_title_center) as TextView?
         leftView = findViewById<View>(R.id.tv_title_left) as TextView?
         rightView = findViewById<View>(R.id.tv_title_right) as TextView?
-        mTitleText!!.setOnClickListener(this)
-        leftView!!.setOnClickListener(this)
-        rightView!!.setOnClickListener(this)
+        mTitleText?.setOnClickListener(this)
+        leftView?.setOnClickListener(this)
+        rightView?.setOnClickListener(this)
     }
 
     fun setTile(text: String?) {
-        mTitleText!!.text = text
+        mTitleText?.text = text
     }
 
     fun showLeftText(isShow: Boolean) {
         if (isShow) {
-            leftView!!.visibility = View.VISIBLE
+            leftView?.visibility = View.VISIBLE
         } else {
-            leftView!!.visibility = View.GONE
+            leftView?.visibility = View.GONE
         }
     }
 
     fun showRightText(isShow: Boolean) {
         if (isShow) {
-            rightView!!.visibility = View.VISIBLE
+            rightView?.visibility = View.VISIBLE
         } else {
-            rightView!!.visibility = View.GONE
+            rightView?.visibility = View.GONE
         }
     }
 
@@ -62,13 +62,13 @@ class TitleBar @JvmOverloads constructor(
     override fun onClick(v: View) {
         when (v.id) {
             R.id.tv_title_left -> if (mOnTitleListener != null) {
-                mOnTitleListener!!.onLeftClick(v)
+                mOnTitleListener?.onLeftClick(v)
             }
             R.id.tv_title_center -> if (mOnTitleListener != null) {
-                mOnTitleListener!!.onTitleClick(v)
+                mOnTitleListener?.onTitleClick(v)
             }
             R.id.tv_title_right -> if (mOnTitleListener != null) {
-                mOnTitleListener!!.onRightClick(v)
+                mOnTitleListener?.onRightClick(v)
             }
         }
     }

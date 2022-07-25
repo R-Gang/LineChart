@@ -36,7 +36,7 @@ open class CoordinatePopup(context: Context, attrs: AttributeSet) :
     // 图表 x/y 轴选中的值
     var xData: String = ""
     var yData: String = ""
-    var descName: String = "播放量" // 弹框说明
+    var descName: String? = null // 弹框说明
 
     var mEverywherePopup: EverywherePopup? = null
     var everywhereBinding: PopupEverywhereBinding? = null
@@ -74,10 +74,11 @@ open class CoordinatePopup(context: Context, attrs: AttributeSet) :
         }
     }
 
-    fun setDescName(posDesc: String = descName): CoordinatePopup {
+    fun setDescName(posDesc: String = "播放量"): CoordinatePopup {
         descName = posDesc
         return this
     }
+
 
     /**
      * 绘制说明区域
