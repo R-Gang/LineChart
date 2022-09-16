@@ -14,8 +14,8 @@ import com.gang.kotlin.popup.EverywherePopup
 import com.gang.kotlin.popup.TriangleDrawable
 import com.gang.kotlin.views.formatNumber
 import com.gang.kotlin.views.setBackground
-import com.gang.library.common.utils.gone
-import com.gang.library.common.utils.show
+import com.gang.tools.kotlin.utils.gone
+import com.gang.tools.kotlin.utils.show
 
 /**
  *

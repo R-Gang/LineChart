@@ -29,5 +29,5 @@
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:layout_marginRight="16dp"
-        android:drawableRight="@mipmap/ic_more_horiz_white" />
+        android:drawableRight="@mipmap/ic_search" />
 </RelativeLayout>

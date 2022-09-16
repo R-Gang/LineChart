@@ -28,7 +28,8 @@ object Android {
     const val versionName = "1.0"
     const val coil = "1.4.0"
     const val room = "2.2.5"
-//    const val glide = "4.12.0"
+
+    //    const val glide = "4.12.0"
     const val coroutines = "1.4.3"
     const val jpush_vip = "4.0.8"
     const val nav_version = "2.3.1"
@@ -44,11 +45,15 @@ object Support {
     const val appcompat = "androidx.appcompat:appcompat:1.3.0"
     const val core_ktx = "androidx.core:core-ktx:1.3.2"
     const val lifecycle_extensions = "androidx.lifecycle:lifecycle-extensions:${Android.lifecycle}"
-    const val lifecycle_viewmodel_ktx = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Android.lifecycle}"
-    const val lifecycle_livedata_ktx = "androidx.lifecycle:lifecycle-livedata-ktx:${Android.lifecycle}"
+    const val lifecycle_viewmodel_ktx =
+        "androidx.lifecycle:lifecycle-viewmodel-ktx:${Android.lifecycle}"
+    const val lifecycle_livedata_ktx =
+        "androidx.lifecycle:lifecycle-livedata-ktx:${Android.lifecycle}"
     const val legacy_support_v4 = "androidx.legacy:legacy-support-v4:1.0.0"
-    const val kotlinx_coroutines_android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Android.coroutines}"
-    const val kotlinx_coroutines_core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Android.coroutines}"
+    const val kotlinx_coroutines_android =
+        "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Android.coroutines}"
+    const val kotlinx_coroutines_core =
+        "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Android.coroutines}"
     const val databinding_runtime = "androidx.databinding:databinding-runtime:${Android.gradle}"
     const val databinding_compiler = "androidx.databinding:databinding-compiler:${Android.gradle}"
     const val fragment_ktx = "androidx.fragment:fragment-ktx:1.4.1"
@@ -66,14 +71,17 @@ object Support {
     const val room_testing = "androidx.room:room-testing:${Android.room}"
     const val build_gradle = "com.android.tools.build:gradle:${Android.gradle}"
     const val kotlin_gradle_plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Android.kotlin}"
-    const val kotlin_android_extensions = "org.jetbrains.kotlin:kotlin-android-extensions:${Android.kotlin}"
+    const val kotlin_android_extensions =
+        "org.jetbrains.kotlin:kotlin-android-extensions:${Android.kotlin}"
     const val junit = "junit:junit:4.13.2"
     const val junit_ext = "androidx.test.ext:junit:1.1.2"
     const val espresso_core = "androidx.test.espresso:espresso-core:3.3.0"
-    const val gradle_versions_plugin = "com.github.ben-manes:gradle-versions-plugin:${Android.gradle_versions_plugin}"
+    const val gradle_versions_plugin =
+        "com.github.ben-manes:gradle-versions-plugin:${Android.gradle_versions_plugin}"
     const val datastore_preferences = "androidx.datastore:datastore-preferences:1.0.0-alpha01"
     const val swiperefreshlayout = "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
-    const val navigation_fragment_ktx = "androidx.navigation:navigation-fragment-ktx:${Android.nav_version}"
+    const val navigation_fragment_ktx =
+        "androidx.navigation:navigation-fragment-ktx:${Android.nav_version}"
     const val navigation_ui_ktx = "androidx.navigation:navigation-ui-ktx:${Android.nav_version}"
 }
 
@@ -92,6 +100,7 @@ object Dependencies {
     const val eventbus = "org.greenrobot:eventbus:3.2.0"    //EventBus解耦
     const val statusbarutil = "com.jaeger.statusbarutil:library:1.5.1"    // 沉浸式状态栏
     const val glide = "com.github.bumptech.glide:glide:4.11.0"
+
     /*const val glide = "com.github.bumptech.glide:glide:${Android.glide}"
     const val glide_compiler = "com.github.bumptech.glide:compiler:${Android.glide}"
     const val glide_transformations = "jp.wasabeef:glide-transformations:4.3.0"*/
@@ -111,7 +120,8 @@ object Dependencies {
     const val coil_svg = "io.coil-kt:coil-svg:${Android.coil}"
     const val coil_video = "io.coil-kt:coil-video:${Android.coil}"
     const val gif_drawable = "pl.droidsonroids.gif:android-gif-drawable:1.2.23"
-//    com.kk.taurus.playerbase:playerbase:3.4.0 此PlayerBase库在Android11上访问网络状态有bug,未加权限判断   https://github.com/jiajunhui/PlayerBase 待修复后再替换回来，
+
+    //    com.kk.taurus.playerbase:playerbase:3.4.0 此PlayerBase库在Android11上访问网络状态有bug,未加权限判断   https://github.com/jiajunhui/PlayerBase 待修复后再替换回来，
     const val playerbase = "com.github.lirenxinshangqiu.PlayerBase:playerbase:3.4.0.1"//
 
     const val butterknife = "com.jakewharton:butterknife-gradle-plugin:10.2.3"
@@ -124,15 +134,19 @@ object Dependencies {
 
     //    二维码 https://github.com/journeyapps/zxing-android-embedded
     const val qr_code = "com.journeyapps:zxing-android-embedded:4.1.0"
+
     //zxing核心库
     const val zxing = "com.google.zxing:core:3.4.1"
     const val x5_webview = "com.tencent.tbs.tbssdk:sdk:43986"
-// okdownload核心库
+
+    // okdownload核心库
     const val okDownload = "com.liulishuo.okdownload:okdownload:1.0.7"
     const val okDownload_okhttp = "com.liulishuo.okdownload:okhttp:1.0.7"
+
     // sockit.io
     const val socket_io_client = "io.socket:socket.io-client:1.0.0"
-//    compile 'com.github.ctiao:DanmakuFlameMaster:0.9.25'
+
+    //    compile 'com.github.ctiao:DanmakuFlameMaster:0.9.25'
 //    compile 'com.github.ctiao:ndkbitmap-armv7a:0.9.21'
 //    弹幕库
     const val danmaku = "com.github.ctiao:DanmakuFlameMaster:0.9.25"
@@ -153,7 +167,13 @@ object Dependencies {
         it.maven { url = URI("https://maven.aliyun.com/repository/central") }
         it.maven { url = URI("https://maven.aliyun.com/repository/google") }
         it.maven { url = URI("https://maven.aliyun.com/repository/jcenter") }
-        it.maven { url = URI("https://jitpack.io") }
+        it.maven {
+            url = URI("https://jitpack.io")
+            credentials {
+                val authToken = "jp_v2f4a2fpc64k39f7gd3ek4m6k7"
+                username = authToken
+            }
+        }
         it.maven { url = URI("https://developer.huawei.com/repo/") }
         it.maven { url = URI("https://dl.google.com/dl/android/maven2/") }
         it.maven { url = URI("https://maven.youzanyun.com/repository/maven-releases") }

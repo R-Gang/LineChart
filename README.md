@@ -1,9 +1,9 @@
-# Chart-Popup
+# LineChart
 
 使用JetPack组件开发-Chart图表控件-Popup弹窗
 
 ![line_chart.gif](https://github.com/R-Gang/Chart-Popup/blob/master/images/line_chart.gif)
-![easy_popup.gif](https://github.com/R-Gang/Chart-Popup/blob/master/images/easy_popup.gif) 
+![line_chart.png](https://github.com/R-Gang/Chart-Popup/blob/master/images/line_chart.png) 
 
 ## Usage
 
@@ -49,36 +49,8 @@
             ?.apply()
     }
 ```
-### 初始化 View
-
-可以 viewBinding=true 获取 View 对象。
-```
-    private var releaseBinding: PopupReleaseDownBinding? = null
-    
-    releaseBinding = PopupReleaseDownBinding.inflate(layoutInflater)
-```
-### 显示
-
-相对于 view 位置显示
-```
-   /**
-    * 相对anchor view显示，适用 宽高不为match_parent
-    *
-    * @param anchor
-    * @param yGravity  垂直方向的对齐方式
-    * @param xGravity  水平方向的对齐方式
-    * @param x            水平方向的偏移
-    * @param y            垂直方向的偏移
-    */
-    releasePop?.showAtAnchorView(view, YGravity.CENTER, XGravity.LEFT, 0, 0);
-```
-除了 showAtAnchorView() 方法，内部还保留了 showAsDropDown()、showAtLocation() 方法。
-
-注意：如果使用 YGravity 和 XGravity 时，请确保使用之后 PopupWindow 没有超出屏幕边界，如果超出屏幕边界，YGravity 和 XGravity 可能无效，从而达不到你想要的效果。#4
 
 ## Reference
 [Android 实现一个自定义曲线图](https://blog.csdn.net/qq_16131393/article/details/89671919)
-
-[EasyPopup「暂停维护」](https://github.com/zyyoona7/EasyPopup)
 
 [Kotlin集成Arouter](https://www.jianshu.com/p/3991195031cd)

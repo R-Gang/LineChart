@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">JetPack_Simple</string>
+    <string name="app_name">LineChart</string>
 
     <string name="mine_content_tab_articles">音频</string>
     <string name="mine_content_tab_video">视频</string>
